@@ -4,6 +4,6 @@
 
 * destroy_friendship -> windows下的对好友狂轰乱炸式的“友情问候”  😅
 
-* snake -> 贪吃蛇（终端）
+* snake -> 贪吃蛇AUTO
 
 * homepage -> 瞎写的搜索主页
