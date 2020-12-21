@@ -56,7 +56,7 @@ void MoveCursor(int xpoint, int ypoint) {
   SetConsoleCursorPosition(g_out, g_position);
 }
 
-int GameOver(int speed) {
+bool GameOver(int speed) {
   system("cls");
   char sel = '0';
   GameMap();
@@ -82,19 +82,19 @@ int GameOver(int speed) {
     sel = _getch();
     if (sel == '1') {
       g_num_of_food_eaten = 0;
-      return 1;
+      return true;
     } else if (sel == '0')
       exit(0);
   } while (1);
-  return 0;
+  return false;
 }
 
 void SpeedSetting(int& speed) {
-  while (1) {
+  while (true) {
     system("cls");
-    cout << "\n\n\n\n\n\n\n   \t   \t   speed<1-20>: ";
+    cout << "\n\n\n\n\n\n\n   \t   \t   speed<1-100>: ";
     cin >> speed;
-    if (speed >= 1 && speed <= 20) {
+    if (speed >= 1 && speed <= 100) {
       speed += 5;
       return;
     } else {
@@ -237,23 +237,13 @@ void SnakeGrowUp(queue<Node>& snake) {
   }
 }
 
-int IsSnakeDie(queue<Node>& snake) {
+bool IsSnakeDie(queue<Node>& snake) {
   // head
   if (snake.back().x == 0 || snake.back().x * 2 == MAP_WIDTH - 2 ||
       snake.back().y == 0 || snake.back().y == MAP_HEIGHT - 1) {
-    return 0;
+    return false;
   }
-  // body
-  /*
-  int xpoint = pmove->xpoint;
-  int ypoint = pmove->ypoint;
-  pmove = pmove->next->next;
-
-  while (pmove) {
-    if (pmove->xpoint == xpoint && pmove->ypoint == ypoint) return 0;
-    pmove = pmove->next;
-  }*/
-  return 1;
+  return true;
 }
 
 void Clean(queue<Node>& snake) {

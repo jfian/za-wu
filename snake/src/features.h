@@ -11,7 +11,6 @@
 
 #include "data.h"
 
-
 //打印地图
 void GameMap();
 
@@ -19,7 +18,7 @@ void GameMap();
 void MoveCursor(int xpoint, int ypoint);
 
 //游戏结束
-int GameOver(int speed);
+bool GameOver(int speed);
 
 //速度设置
 void SpeedSetting(int& speed);
@@ -40,7 +39,7 @@ void MoveSnake(std::queue<Node>& snake);
 void SnakeGrowUp(std::queue<Node>& snake);
 
 //蛇死亡
-int IsSnakeDie(std::queue<Node>& snake);
+bool IsSnakeDie(std::queue<Node>& snake);
 
 //清除
 void Clean(std::queue<Node>& snake);

@@ -16,4 +16,10 @@ typedef struct Node {
   int x;
   int y;
 } Node;
+
+typedef struct DisDir {
+  double distence;
+  char direction;
+} dis_dir;
+
 #endif

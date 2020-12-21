@@ -1,0 +1,5 @@
+GitBat/core/r.log
+*.o
+main
+*.exe
+snake/build

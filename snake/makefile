@@ -1,7 +1,6 @@
 CXX = g++
 vpath %.h src
 vpath %.cc src
-vpath %.o build
 
 OBJS = main.o features.o auto.o
 OBJS_DIR = build

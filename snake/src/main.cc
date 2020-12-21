@@ -19,7 +19,8 @@ int main() {
       Sleep(1000 / speed);
       CreateFood();
       MoveSnake(snake);
-      Auto(snake);
+      // Auto(snake);
+      AutoDis(snake);
       SnakeGrowUp(snake);
       if (!IsSnakeDie(snake) || g_num_of_food_eaten >= 2000) break;
     }
